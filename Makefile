@@ -56,12 +56,9 @@ help:
 # luacc and replace the filter file.
 # ifeq is safer than ifdef (easier for the user to make
 # the variable empty than to make it undefined).
-.PHONY: build
-build: _build
-
 ifneq ($(SOURCE_MAIN), )
-.PHONY: _build
-_build: _check_luacc $(SOURCE_FILES)
+.PHONY: build
+build: _check_luacc $(SOURCE_FILES)
 	@if [ -f $(QUARTO_EXT_DIR)/$(FILTER_FILE) ]; then \
 		luacc -o $(QUARTO_EXT_DIR)/$(FILTER_FILE) -i $(SOURCE_DIR) \
 			$(SOURCE_DIR)/$(SOURCE_MAIN) $(SOURCE_MODULES); \
@@ -73,9 +70,8 @@ _build: _check_luacc $(SOURCE_FILES)
 			$(SOURCE_DIR)/$(SOURCE_MAIN) $(SOURCE_MODULES); \
 	fi
 else
-.PHONY: _build
-_build:
-
+.PHONY: build
+build:
 endif
 
 .PHONY: check_luacc
