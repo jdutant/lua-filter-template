@@ -132,6 +132,53 @@ contents of this README, an example generated from the test input,
 as well as the full filter code. The page components are combined
 with the `.tools/docs.lua` filter.
 
+#### `build`
+
+Build the filter from multiple source files. Use this target if you
+want to develop the filter as multiple source files but distribute
+it in a single source.
+
+Requires [Lua Code Combiner][luacc], available on LuaRocks. Install
+with `luarocks install luacc` (requires [LuaRocks][luarocks]).
+
+[luacc]: https://luarocks.org/modules/mihacooper/luacc
+[luarocks]: https://luarocks.org
+
+__Setup__. Suppose your source files are as follows:
+
+```
+/path/to/filter
+    |-src/
+         |-main.lua
+         |-module1.lua
+         |-module2.lua
+```
+
+Where `main.lua` uses the module files with the standard Lua
+function `require('module1')` or `myvar = require('module2')`.
+
+Edit the Makefile lines below as follows:
+
+```
+SOURCE_DIR = src/
+SOURCE_MAIN = main
+SOURCE_MODULES = module1 module2
+```
+
+__Usage__. `build` uses LuaCC to combine the main source and its
+module into a single Lua file which will **replace** your filter's
+file. It is automatically called when using `generate` and `release`.
+
+
+Deactivate by setting  `SOURCE_MAIN` to be empty:
+
+```
+SOURCE_MAIN =
+```
+
+Commenting this line out is not recommended, as the variable
+may remain defined in your shell session.
+
 ### Website
 
 The repository template comes with a GitHub Action to publish a
