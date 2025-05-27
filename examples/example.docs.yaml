@@ -1,0 +1,12 @@
+#
+# Pandoc defaults for example output embedded in the docs
+#
+verbosity: ERROR
+standalone: true
+filters:
+  - {type: lua, path: greetings.lua}
+
+# Metadata to be parsed as Markdown must be provided in a 
+# separate file. See <https://pandoc.org/MANUAL.html#reader-options-1>
+#
+# metadata-file: ${.}/website_meta.yaml

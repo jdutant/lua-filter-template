@@ -1,0 +1,304 @@
+Pandoc
+  Meta
+    { unMeta =
+        fromList
+          [ ( "author"
+            , MetaInlines
+                [ Str "Jane" , Space , Str "E." , Space , Str "Doe" ]
+            )
+          , ( "subtitle"
+            , MetaInlines [ Str "Sample" , Space , Str "document" ]
+            )
+          , ( "title" , MetaInlines [ Str "Greetings!" ] )
+          ]
+    }
+  [ Para
+      [ Str "Hello"
+      , Space
+      , Str "from"
+      , Space
+      , Str "the"
+      , Space
+      , Str "Lua"
+      , Space
+      , Str "filter!"
+      ]
+  , Para
+      [ Str "Lorem"
+      , Space
+      , Str "ipsum"
+      , Space
+      , Str "dolor"
+      , Space
+      , Str "sit"
+      , Space
+      , Str "amet,"
+      , Space
+      , Str "consectetur"
+      , Space
+      , Str "adipiscing"
+      , Space
+      , Str "elit."
+      , Space
+      , Str "Sed"
+      , Space
+      , Str "do"
+      , SoftBreak
+      , Str "eiusmod"
+      , Space
+      , Str "tempor"
+      , Space
+      , Str "incididunt"
+      , Space
+      , Str "ut"
+      , Space
+      , Str "labore"
+      , Space
+      , Str "et"
+      , Space
+      , Str "dolore"
+      , Space
+      , Str "magna"
+      , Space
+      , Str "aliqua."
+      , Space
+      , Str "Ut"
+      , SoftBreak
+      , Str "enim"
+      , Space
+      , Str "ad"
+      , Space
+      , Str "minim"
+      , Space
+      , Str "veniam,"
+      , Space
+      , Str "quis"
+      , Space
+      , Str "nostrud"
+      , Space
+      , Str "exercitation"
+      , Space
+      , Str "ullamco"
+      , Space
+      , Str "laboris"
+      , SoftBreak
+      , Str "nisi"
+      , Space
+      , Str "ut"
+      , Space
+      , Str "aliquip"
+      , Space
+      , Str "ex"
+      , Space
+      , Str "ea"
+      , Space
+      , Str "commodo"
+      , Space
+      , Str "consequat."
+      , Space
+      , Str "Duis"
+      , Space
+      , Str "aute"
+      , Space
+      , Str "irure"
+      , Space
+      , Str "dolor"
+      , Space
+      , Str "in"
+      , SoftBreak
+      , Str "reprehenderit"
+      , Space
+      , Str "in"
+      , Space
+      , Str "voluptate"
+      , Space
+      , Str "velit"
+      , Space
+      , Str "esse"
+      , Space
+      , Str "cillum"
+      , Space
+      , Str "dolore"
+      , Space
+      , Str "eu"
+      , Space
+      , Str "fugiat"
+      , SoftBreak
+      , Str "nulla"
+      , Space
+      , Str "pariatur."
+      , Space
+      , Str "Excepteur"
+      , Space
+      , Str "sint"
+      , Space
+      , Str "occaecat"
+      , Space
+      , Str "cupidatat"
+      , Space
+      , Str "non"
+      , Space
+      , Str "proident,"
+      , SoftBreak
+      , Str "sunt"
+      , Space
+      , Str "in"
+      , Space
+      , Str "culpa"
+      , Space
+      , Str "qui"
+      , Space
+      , Str "officia"
+      , Space
+      , Str "deserunt"
+      , Space
+      , Str "mollit"
+      , Space
+      , Str "anim"
+      , Space
+      , Str "id"
+      , Space
+      , Str "est"
+      , Space
+      , Str "laborum."
+      ]
+  , Para
+      [ Str "Lorem"
+      , Space
+      , Str "ipsum"
+      , Space
+      , Str "dolor"
+      , Space
+      , Str "sit"
+      , Space
+      , Str "amet,"
+      , Space
+      , Str "consectetur"
+      , Space
+      , Str "adipiscing"
+      , Space
+      , Str "elit."
+      , Space
+      , Str "Sed"
+      , Space
+      , Str "do"
+      , SoftBreak
+      , Str "eiusmod"
+      , Space
+      , Str "tempor"
+      , Space
+      , Str "incididunt"
+      , Space
+      , Str "ut"
+      , Space
+      , Str "labore"
+      , Space
+      , Str "et"
+      , Space
+      , Str "dolore"
+      , Space
+      , Str "magna"
+      , Space
+      , Str "aliqua."
+      , Space
+      , Str "Ut"
+      , SoftBreak
+      , Str "enim"
+      , Space
+      , Str "ad"
+      , Space
+      , Str "minim"
+      , Space
+      , Str "veniam,"
+      , Space
+      , Str "quis"
+      , Space
+      , Str "nostrud"
+      , Space
+      , Str "exercitation"
+      , Space
+      , Str "ullamco"
+      , Space
+      , Str "laboris"
+      , SoftBreak
+      , Str "nisi"
+      , Space
+      , Str "ut"
+      , Space
+      , Str "aliquip"
+      , Space
+      , Str "ex"
+      , Space
+      , Str "ea"
+      , Space
+      , Str "commodo"
+      , Space
+      , Str "consequat."
+      , Space
+      , Str "Duis"
+      , Space
+      , Str "aute"
+      , Space
+      , Str "irure"
+      , Space
+      , Str "dolor"
+      , Space
+      , Str "in"
+      , SoftBreak
+      , Str "reprehenderit"
+      , Space
+      , Str "in"
+      , Space
+      , Str "voluptate"
+      , Space
+      , Str "velit"
+      , Space
+      , Str "esse"
+      , Space
+      , Str "cillum"
+      , Space
+      , Str "dolore"
+      , Space
+      , Str "eu"
+      , Space
+      , Str "fugiat"
+      , SoftBreak
+      , Str "nulla"
+      , Space
+      , Str "pariatur."
+      , Space
+      , Str "Excepteur"
+      , Space
+      , Str "sint"
+      , Space
+      , Str "occaecat"
+      , Space
+      , Str "cupidatat"
+      , Space
+      , Str "non"
+      , Space
+      , Str "proident,"
+      , SoftBreak
+      , Str "sunt"
+      , Space
+      , Str "in"
+      , Space
+      , Str "culpa"
+      , Space
+      , Str "qui"
+      , Space
+      , Str "officia"
+      , Space
+      , Str "deserunt"
+      , Space
+      , Str "mollit"
+      , Space
+      , Str "anim"
+      , Space
+      , Str "id"
+      , Space
+      , Str "est"
+      , Space
+      , Str "laborum."
+      ]
+  ]

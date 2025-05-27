@@ -6,10 +6,27 @@ Greetings, a Lua Filter Template
 Greetings is a friendly Lua filter that adds a welcoming message
 to the document.
 
-[CI badge]: https://img.shields.io/github/actions/workflow/status/tarleb/lua-filter-template/ci.yaml?branch=main
-[CI workflow]: https://github.com/tarleb/lua-filter-template/actions/workflows/ci.yaml
+[CI badge]: https://img.shields.io/github/actions/workflow/status/jdutant/lua-filter-template/ci.yaml?branch=main
+[CI workflow]: https://github.com/jdutant/lua-filter-template/actions/workflows/ci.yaml
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+Extensions from Lua filter template:
+- build from multiple source files
+- doc separate from README.md
+- can run the filter on the documentation
+- release with or without quarto extension
+- improve doc style (anchor links)
+- multiple test files with their own defaults
+- commented Makefile
+- better error reporting (tests)
+
+FEATURES
+
+- Customize LaTeX to run tests on GitHub
+- Use LuaCC to compile a unique lua file
+- Do not use the README.md as documentation
+- Can run the filter on the documentation
 
 This repository serves as a template intended to make publishing
 of pandoc [Lua filters][] easy and convenient. Just click "use
@@ -19,6 +36,7 @@ template][from template].
 
 [Lua filters]: https://pandoc.org/lua-filters.html
 [from template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+
 
 Template Usage
 ------------------------------------------------------------------
@@ -163,6 +181,17 @@ with `luarocks install luacc` (requires [LuaRocks][luarocks]).
 
 [luacc]: https://luarocks.org/modules/mihacooper/luacc
 [luarocks]: https://luarocks.org
+
+Warning: both _extensions/test/test.lua and test.lua are files.
+Recall that you should only edit source in the source folder. When
+a Quarto extension is present, test.lua should be a symlink to
+_extensions/test/test.lua. If you want to remove the Quarto
+extension, delete the `_extension` folder. If you proceed,
+_extensions/test/test.lua and test.lua will be overwritten. 
+
+[1]: https://luarocks.org/modules/mihacooper/luacc 
+
+
 
 __Setup__. Suppose your source files are as follows:
 

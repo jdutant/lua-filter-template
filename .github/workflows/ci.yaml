@@ -17,8 +17,8 @@ on:
   # This way we will catch incompatible pandoc changes in a timely
   # manner.
   schedule:
-    # At 5:39am each Tuesday
-    - cron: '39 5 * * 2'
+    # At 3:47am each Thursday
+    - cron: '47 3 * * 4'
 
 jobs:
   test:
@@ -27,10 +27,9 @@ jobs:
       fail-fast: true
       matrix:
         pandoc:
-          - edge
+          #- edge # uncomment to catch errors faster
           - latest
-            # This should be the oldest version that's supported
-            # - 2.19.2
+          # - 2.19.2
 
     container:
       image: pandoc/core:${{ matrix.pandoc }}
@@ -43,4 +42,4 @@ jobs:
         run: apk add make
 
       - name: Test
-        run: make test
+        run: make test BUILD=false
